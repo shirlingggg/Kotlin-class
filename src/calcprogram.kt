@@ -13,18 +13,18 @@ fun main() {
     println("Enter num2: ")
     var num2= read.nextInt()
 
-    if (operate == "/" num2 ==0){
+    if (operate == "/" && num2 ==0){
         println("You can't enter 0!")
         return
     }
 
     println("$num1 $operate $num2")
 
-    var answer= when(operate){
-        "+" -> num1 + num2
-        "-" -> num1 + num2
-        "*" -> num1 + num2
-        "/" -> num1 + num2
+    var answer= when{
+        operate== "+" -> num1 + num2
+        operate== "-" -> num1 - num2
+        operate== "*" -> num1 * num2
+        operate== "/" -> num1 / num2
         else -> "Invalid operator!"
 
     }
